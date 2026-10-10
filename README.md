@@ -1,8 +1,5 @@
-# Dance Genre Classification via Pose Estimation
+# Dance Analysis System
 
-**Seminar project — Master's in Data-Driven Business Decision Systems**  
-Faculty of Computer Science and Engineering (FINKI), Ss. Cyril and Methodius University  
-Sandra Georgiev, 2025/2026
 
 ---
 
@@ -42,16 +39,6 @@ Video → Pose Estimation (skeleton) → Action Recognition → Genre Label
 | **ST-GCN** | **98.68%** | **Graph Conv (+3.51% over LSTM)** |
 | MotionBERT | — | Pretrained Transformer |
 
-### Multi-stream: Joint Coordinates + Motion (dx/dy)
-
-| Model | Joint only | + Motion | Δ |
-|---|---|---|---|
-| SVM | 85.96% | 75.00% | **−10.96%** |
-| RF | 85.96% | 80.70% | −5.26% |
-| LSTM | 91.23% | 94.30% | **+3.07%** |
-| ST-GCN | 98.68% | 96.49% | −2.19% |
-
-> Motion features help LSTM (temporal model benefits from explicit velocity) but hurt SVM/RF (noise in flattened feature space).
 
 ### Domain Shift — BeatBusterz HipHop Groups (broadcast video, 7 dancers)
 
@@ -129,20 +116,4 @@ AIST++ PKL files
        YOLO26s-pose + ST-GCN → web interface
 ```
 
----
 
-## Business Scenarios
-
-1. **Dance education** — automatically identify and catalog dance style in recorded practice sessions
-2. **Competition organization** — tag competition archives by genre, reducing manual annotation effort
-3. **Choreographic analysis** — compare skeletal movement patterns across genres
-
----
-
-## References
-
-- Zhu et al. (ICCV 2023) — MotionBERT: A Unified Perspective on Learning Human Motion Representations
-- Shi et al. (CVPR 2019) — Two-Stream Adaptive Graph Convolutional Networks (2s-AGCN)
-- Li et al. (CVPR 2021) — AI Choreographer: Music Conditioned 3D Dance Generation with AIST++
-- Jiang et al. (2023) — RTMPose: Real-Time Multi-Person Pose Estimation
-- Xu et al. (2022) — ViTPose: Simple Vision Transformer Baselines for Human Pose Estimation
