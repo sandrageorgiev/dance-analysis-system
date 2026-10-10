@@ -1,0 +1,21 @@
+# Large model files
+*.pt
+*.bin
+*.onnx
+*.zip
+
+# Drive data (too large for git)
+*.pkl
+*.mp4
+*.jpg
+*.png
+frames/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Results JSON (large)
+*_b1.json
+*_b2.json
